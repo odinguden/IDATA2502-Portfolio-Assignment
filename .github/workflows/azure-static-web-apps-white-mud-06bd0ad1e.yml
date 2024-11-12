@@ -31,10 +31,11 @@ jobs:
       with:
         creds: ${{ secrets.AZURE_CREDENTIALS }}
 
-    - name: Deploy to Azure Web App
-      uses: azure/webapps-deploy@v2
+    - name: Deploy to Azure Static Web Apps
+      uses: Azure/static-web-apps-deploy@v1
       with:
-        app-name: "IDATA2502-Portfolio-Assignment"
-        slot-name: production
-        publish-profile: ${{ secrets.clientSecret }}
-
+        azure_static_web_apps_api_token: ${{ secrets.AZURE_STATIC_WEB_APPS_API_TOKEN_WHITE_MUD_06BD0AD1E }}
+        repo_token: ${{ secrets.GITHUB_TOKEN }}
+        action: 'upload'
+        app_location: './IDATA2502-Portfolio-Assignment'
+        output_location: './IDATA2502-Portfolio-Assignment/dist'
