@@ -38,4 +38,4 @@ jobs:
         repo_token: ${{ secrets.GITHUB_TOKEN }}
         action: 'upload'
         app_location: './Idata2502-Portfolio-Assigment'
-        output_location: './Idata2502-Portfolio-Assigment/dist'
+        output_location: './dist'
