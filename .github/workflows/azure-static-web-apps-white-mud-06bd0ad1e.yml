@@ -18,6 +18,9 @@ jobs:
       with:
         node-version: '16'
 
+    - name: change directory
+      run: cd IDATA2502-Portfolio-Assigment
+
     - name: Install dependencies
       run: npm install
 
