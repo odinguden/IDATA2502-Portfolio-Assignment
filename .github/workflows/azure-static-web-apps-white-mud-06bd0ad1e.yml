@@ -14,10 +14,10 @@ jobs:
     - name: Checkout repository
       uses: actions/checkout@v2
 
-    - name: Create node.js version
-      uses: actions/setup-node@v1
-      with:
-        node-version: '10.2.3'
+    #- name: Create node.js version
+    #  uses: actions/setup-node@v1
+    #  with:
+    #    node-version: '10.2.3'
 
     - name: install packages
       run: npm install
