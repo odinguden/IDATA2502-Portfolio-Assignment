@@ -19,16 +19,17 @@ jobs:
         node-version: '16'
 
     - name: Install dependencies
-      working-directory: "./IDATA2502-Portfolio-Assigment"
       run: npm install
+      working-directory: ./IDATA2502-Portfolio-Assignment
 
     - name: Build project
-      working-directory: "./IDATA2502-Portfolio-Assigment"
       run: npm run build
+      working-directory: ./IDATA2502-Portfolio-Assignment
 
     - name: Deploy to Azure Web App
       uses: azure/webapps-deploy@v2
       with:
-        app-name: IDATA2502
+        app-name: IDATA2502-Portfolio-Assignment
         slot-name: production
         publish-profile: ${{ secrets.AZURE_WEBAPP_PUBLISH_PROFILE }}
+      working-directory: ./IDATA2502-Portfolio-Assignment
