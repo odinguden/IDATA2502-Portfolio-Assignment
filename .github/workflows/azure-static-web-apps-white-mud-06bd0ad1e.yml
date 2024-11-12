@@ -26,6 +26,11 @@ jobs:
       working-directory: "./Idata2502-Portfolio-Assigment"
       run: npm run build
 
+    - name: Azure Login
+      uses: azure/login@v1
+      with:
+        creds: ${{ secrets.AZURE_CREDENTIALS }}
+
     - name: IDATA2502-Portfolio-Assignment
       uses: azure/webapps-deploy@v2
       with:
