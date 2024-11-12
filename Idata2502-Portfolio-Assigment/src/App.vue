@@ -11,7 +11,7 @@ import TheWelcome from './components/TheWelcome.vue'
                 <div class="grid-item"><h1>LEMON!</h1></div>
                 <div class="grid-item"></div>
                 <div class="grid-item"></div>
-                <div class="grid-item"><img src="../lemon.jpg" alt="Homie"></div>
+                <div class="grid-item"><img src="../public/lemon.jpg" alt="Homie"></div>
                 <div class="grid-item"></div>
                 <div class="grid-item"></div>
                 <div class="grid-item"></div>
@@ -26,7 +26,7 @@ img {
     border-radius: 10%;
 }
 main{
-    background-image: image-set("../vincentiu-solomon-ln5drpv_ImI-unsplash.jpg");
+    background-image: image-set("../public/vincentiu-solomon-ln5drpv_ImI-unsplash.jpg");
     background-size: 100%;
 }
 .grid-container{
