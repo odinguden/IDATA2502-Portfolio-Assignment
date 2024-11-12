@@ -26,7 +26,7 @@ jobs:
       working-directory: "./Idata2502-Portfolio-Assigment"
       run: npm run build
 
-    - name: Deploy to Azure Web App
+    - name: IDATA2502-Portfolio-Assignment
       uses: azure/webapps-deploy@v2
       with:
         app-name: IDATA2502
