@@ -21,6 +21,8 @@ jobs:
 
     - name: install packages
       run: npm install
+      with:
+        working-directory: Idata2502-Portfolio-Assigment
 
     - name: build
       run: npm run build
