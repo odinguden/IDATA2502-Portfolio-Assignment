@@ -26,6 +26,10 @@ jobs:
       working-directory: "./Idata2502-Portfolio-Assigment"
       run: npm run build
 
+    - name: Run unit tests
+      working-directory: "./Idata2502-Portfolio-Assigment"
+      run: npm run test:unit
+
     - name: Azure Login
       uses: azure/login@v1
       with:
