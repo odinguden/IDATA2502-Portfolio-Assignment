@@ -34,7 +34,7 @@ jobs:
     - name: Deploy to Azure Web App
       uses: azure/webapps-deploy@v2
       with:
-        app-name: IDATA2502-Portfolio-Assignment
+        app-name: "IDATA2502-Portfolio-Assignment"
         slot-name: production
         publish-profile: ${{ secrets.clientSecret }}
 
