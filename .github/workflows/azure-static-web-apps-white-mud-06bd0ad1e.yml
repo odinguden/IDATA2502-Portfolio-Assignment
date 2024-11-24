@@ -34,7 +34,8 @@ jobs:
     steps:
       - name: Run unit tests
         #working-directory: "IDATA2502-Portfolio-Assignment"
-        run: npm run test:unit
+        run: npm run test:unit --prefix IDATA2502-Portfolio-Assignment
+
 
 
   deploy-to-azure:
