@@ -38,7 +38,7 @@ jobs:
 
     steps:
       - name: Run unit tests
-        working-directory: "./Idata2502-Portfolio-Assigment"
+        working-directory: ""
         run: npm run test:unit
 
 
