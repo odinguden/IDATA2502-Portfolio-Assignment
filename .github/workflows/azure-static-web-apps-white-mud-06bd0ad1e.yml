@@ -32,11 +32,11 @@ jobs:
 
     steps:
     - name: Npm ci
-      working-directory: "IDATA2502-Portfolio-Assignment"
+      #working-directory: "IDATA2502-Portfolio-Assignment"
       run: npm ci
 
     - name: Run unit tests
-      working-directory: "IDATA2502-Portfolio-Assignment"
+      #working-directory: "IDATA2502-Portfolio-Assignment"
       run: npm run test:unit
 
 
