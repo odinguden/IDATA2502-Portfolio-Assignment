@@ -19,11 +19,11 @@ jobs:
         node-version: '16'
 
     - name: Install dependencies
-      working-directory: "./IDATA2502-Portfolio-Assignment"
+      working-directory: "IDATA2502-Portfolio-Assignment"
       run: npm install
 
     - name: Build project
-      working-directory: "./IDATA2502-Portfolio-Assignment"
+      working-directory: "IDATA2502-Portfolio-Assignment"
       run: npm run build
 
 
@@ -33,7 +33,7 @@ jobs:
 
     steps:
       - name: Run unit tests
-        working-directory: "./IDATA2502-Portfolio-Assignment"
+        working-directory: "IDATA2502-Portfolio-Assignment"
         run: npm run test:unit
 
 
