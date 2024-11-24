@@ -26,7 +26,6 @@ jobs:
       working-directory: "./Idata2502-Portfolio-Assigment"
       run: npm run build
 
-
     - name: Azure Login
       uses: azure/login@v1
       with:
@@ -35,6 +34,8 @@ jobs:
 
   run-tests:
     runs-on: ubuntu-latest
+
+    steps:
     - name: Run unit tests
       working-directory: "./Idata2502-Portfolio-Assigment"
       run: npm run test:unit
@@ -42,6 +43,13 @@ jobs:
 
   deploy-to-azure:
     runs-on: ubuntu-latest
+    
+    steps:
+    - name: Azure Login
+      uses: azure/login@v1
+      with:
+        creds: ${{ secrets.AZURE_CREDENTIALS }}
+
     - name: Deploy to Azure Static Web Apps
       uses: Azure/static-web-apps-deploy@v1
       with:
