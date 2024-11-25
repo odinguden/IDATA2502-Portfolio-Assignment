@@ -5,8 +5,8 @@ RUN npm install -g http-server
 
 COPY package*.json ./
 
-#WORKDIR /src
-
+WORKDIR /src
+RUN npm cache clean --force
 RUN npm install
 
 COPY . .
