@@ -46,5 +46,5 @@ jobs:
         azure_static_web_apps_api_token: ${{ secrets.AZURE_STATIC_WEB_APPS_API_TOKEN_WHITE_MUD_06BD0AD1E }}
         repo_token: ${{ secrets.GITHUB_TOKEN }}
         action: 'upload'
-        app_location: "IDATA2502-Portfolio-Assignment/dist"
+        app_location: './IDATA2502-Portfolio-Assignment'
         output_location: './dist'
