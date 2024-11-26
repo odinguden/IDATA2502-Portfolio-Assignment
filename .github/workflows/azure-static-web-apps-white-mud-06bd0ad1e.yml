@@ -19,15 +19,15 @@ jobs:
         node-version: '16'
 
     - name: Install dependencies
-      working-directory: "./Idata2502-Portfolio-Assigment"
+      working-directory: "./IDATA2502-Portfolio-Assignment"
       run: npm install
 
     - name: Build project
-      working-directory: "./Idata2502-Portfolio-Assigment"
+      working-directory: "./IDATA2502-Portfolio-Assignment"
       run: npm run build
 
     - name: Run unit tests
-      working-directory: "./Idata2502-Portfolio-Assigment"
+      working-directory: "./IDATA2502-Portfolio-Assignment"
       run: npm run test:unit
 
     - name: Azure Login
@@ -41,5 +41,5 @@ jobs:
         azure_static_web_apps_api_token: ${{ secrets.AZURE_STATIC_WEB_APPS_API_TOKEN_WHITE_MUD_06BD0AD1E }}
         repo_token: ${{ secrets.GITHUB_TOKEN }}
         action: 'upload'
-        app_location: './Idata2502-Portfolio-Assigment'
+        app_location: './IDATA2502-Portfolio-Assignment'
         output_location: './dist'
