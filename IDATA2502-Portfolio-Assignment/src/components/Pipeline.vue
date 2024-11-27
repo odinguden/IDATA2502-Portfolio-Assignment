@@ -1,11 +1,14 @@
 <script setup>
+import Job from './Job.vue';
+import { VList, VListItem, VListItemTitle, VListGroup } from 'vuetify/components';
+
 defineProps({
   title: {
     type: String,
     required: true,
   },
-  content: {
-    type: String,
+  jobs: {
+    type: Array,
     required: true,
   },
 })
@@ -14,10 +17,18 @@ defineProps({
 <template>
   <div>
     <h1>{{ title }}</h1>
-    <p>{{ content }}</p>
-  </div>
+    <div>
+    <VList>
+        <VListItem
+            v-for="(job, index) in jobs"
+            :key="index"
+            color="black"
+            >
+            <job :title=job.name :steps=job.steps />
+        </VListItem>
+    </VList>
+  </div>  </div>
 </template>
 
 <style scoped>
-
 </style>

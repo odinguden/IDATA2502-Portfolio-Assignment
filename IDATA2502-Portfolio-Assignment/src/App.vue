@@ -6,14 +6,16 @@ import pipeline2 from './assets/pipeline2.json';
 </script>
 
 <template>
-    <body>
-        <main>
-            <Pipeline :title=pipeline1.name :content=pipeline1.description />
-            <Description :title=pipeline1.name :description=pipeline1.description />
-        </main>
-    </body>
+    <div class="main-box">
+        <Pipeline :title=pipeline1.name :jobs=pipeline1.jobs />
+        <Description :title=pipeline1.name :description=pipeline1.description />
+    </div>
 </template>
 
 <style>
-
+.main-box {
+    display: flex;
+    justify-content: space-evenly;
+    width: 100%;
+}
 </style>
