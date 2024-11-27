@@ -1,6 +1,10 @@
 <script setup>
 defineProps({
-  msg: {
+  title: {
+    type: String,
+    required: true,
+  },
+  content: {
     type: String,
     required: true,
   },
@@ -8,11 +12,9 @@ defineProps({
 </script>
 
 <template>
-  <div class="greetings">
-    <h1 class="green">{{ msg }}</h1>
-    <h3>
-
-    </h3>
+  <div>
+    <h1>{{ title }}</h1>
+    <p>{{ content }}</p>
   </div>
 </template>
 

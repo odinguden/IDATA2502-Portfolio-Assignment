@@ -1,0 +1,48 @@
+{
+    "name": "Pipeline 1",
+    "description": "Pipeline description",
+    "jobs": [
+        {
+            "name": "Build",
+            "description": "Build description",
+            "steps": [
+                {
+                    "step": "Step 1",
+                    "description": "Step 1 description"
+                },
+                {
+                    "step": "Step 2",
+                    "description": "Step 2 description"
+                }
+            ]
+        },
+        {
+            "name": "Test",
+            "description": "Test description",
+            "steps": [
+                {
+                    "step": "Step 1",
+                    "description": "Step 1 description"
+                },
+                {
+                    "step": "Step 2",
+                    "description": "Step 2 description"
+                }
+            ]
+        },
+        {
+            "name": "Deploy",
+            "description": "Deploy description",
+            "steps": [
+                {
+                    "step": "Step 1",
+                    "description": "Step 1 description"
+                },
+                {
+                    "step": "Step 2",
+                    "description": "Step 2 description"
+                }
+            ]
+        }
+    ]
+}
