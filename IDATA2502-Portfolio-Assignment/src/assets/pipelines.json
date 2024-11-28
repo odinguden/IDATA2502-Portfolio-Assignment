@@ -1,48 +1,50 @@
 [
 	{
 		"id":0,
-		"name": "Pipeline 1",
-		"description": "Pipeline description",
+		"name": "IDATA2502 project pipeline",
+		"description": "This is the pipeline for the IDATA2502 project",
 		"jobs": [
 			{
-				"name": "Build",
-				"description": "Build description",
+				"name": "Build and test",
+				"description": "This job builds the project and runs the related unit tests. Runs on the latest version of Ubuntu",
 				"steps": [
 					{
-						"step": "Step 1",
-						"description": "Step 1 description"
+						"step": "Checkout code",
+						"description": "Gets the code from the repository"
 					},
 					{
-						"step": "Step 2",
-						"description": "Step 2 description"
-					}
-				]
-			},
-			{
-				"name": "Test",
-				"description": "Test description",
-				"steps": [
-					{
-						"step": "Step 1",
-						"description": "Step 1 description"
+						"step": "Set up node js",
+						"description": "Gets nodejs 16"
 					},
 					{
-						"step": "Step 2",
-						"description": "Step 2 description"
+						"step": "Install dependencies",
+						"description": "Installs all the necessary dependencies for the project" 
+					},
+					{
+						"step": "Build project",
+						"description": "Builds the project, Uses the command 'npm run build'"
+					},
+					{
+						"step": "Run tests",
+						"description": "Runs the projects unit tests, Uses the command 'npm run test'"
 					}
 				]
 			},
 			{
 				"name": "Deploy",
-				"description": "Deploy description",
+				"description": "This steps deploys the project to a Azure server, Runs on the latest version of Ubuntu",
 				"steps": [
 					{
-						"step": "Step 1",
-						"description": "Step 1 description"
+						"step": "Checkout code",
+						"description": "Gets the code from the repository"
 					},
 					{
-						"step": "Step 2",
-						"description": "Step 2 description"
+						"step": "Azure login",
+						"description": "Logs into Azure using azure/login@v1"
+					},
+					{
+						"step": "Deploy to static web apps",
+						"description": "Deploys the app to Azure static web apps, uses azure credentials secret. and github token secret"
 					}
 				]
 			}
