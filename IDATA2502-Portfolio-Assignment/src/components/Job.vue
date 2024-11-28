@@ -16,7 +16,7 @@ defineProps({
 
 <template>
   <div>
-    <h1>{{ title }}</h1>
+    <h2>{{ title }}</h2>
     <VList>
         <VListItem v-for="(step, index) in steps" :key="index">
             <step :title=step.step :description=step.description />

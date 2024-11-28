@@ -12,7 +12,7 @@ defineProps({
 </script>
 
 <template>
-  <div>
+  <div class="text">
     <h1>{{ title }}</h1>
     <h3>
         {{ description }}
@@ -21,6 +21,10 @@ defineProps({
 </template>
 
 <style scoped>
+  .text {
+    width: 40%;
+  }
+
     h1 {
         color: white;
     }

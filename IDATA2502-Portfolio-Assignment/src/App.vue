@@ -1,21 +1,25 @@
 <script setup>
-import Description from './components/Description.vue';
-import Pipeline from './components/Pipeline.vue';
-import pipeline1 from './assets/pipeline1.json';
-import pipeline2 from './assets/pipeline2.json';
+import MainContainer from './components/MainContainer.vue';
 </script>
 
 <template>
-    <div class="main-box">
-        <Pipeline :title=pipeline1.name :jobs=pipeline1.jobs />
-        <Description :title=pipeline1.name :description=pipeline1.description />
-    </div>
-</template>
+    <main>
+        <h1>The pipeline viewer</h1>
+        <MainContainer />
+    </main>
+    </template>
 
 <style>
+h1 {
+    color: white;
+    margin: 10px;
+}
+main {
+    align-items: center;
+}
 .main-box {
     display: flex;
     justify-content: space-evenly;
-    width: 100%;
+    width: 1500px; /* This is bad practice, but this is a proof of concept */
 }
 </style>
